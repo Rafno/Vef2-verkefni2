@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  if data.err
+    ul
+      each val, index in data.err
+        li=val
+  form(id = 'form' method = 'post' action='/register')
+    div(class="rowHandler")
+      div(class="row")
+        label(for='name') name
+        input(type='text', name='name', value=data.name)
+      div(class="row")
+        label(for='email') email
+        input(type='text', name='email', value=data.email)
+      div(class="row")
+        label(for='ssn') ssn
+        input(type='text',name='ssn', value=data.ssn)
+      div(class="row")
+        label(for='amount') amount
+        input(type='text',name='amount', value=data.amount)
+      div(class="Submit")
+        input(type="submit" value="senda")
+  div(class="Bottom")
+      if LoginOut
+        form(class="loginOut", method="logout", action="/logout")
+          button Útskrá
+          if leyndarmal
+          p='Innskráður notandi: ' + admin
+          a(href="/admin") Stjórnsíða
+      else
+        form(class="loginOut", method="logout", action="/login")
+          button Innskrá

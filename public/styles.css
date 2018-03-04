@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  background-color: #eee;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 15%;
+  text-align: center;
+  margin: auto;
+  margin-top: 15%;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input {
+  min-height: 30px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  float: right;
+  margin: auto;
+}
+
+.submit {
+  padding-top: 4%;
+  padding-right: 58%;
+}
+
+.table-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  min-width: 75%;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+}
+
+.Bottom {
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+a {
+  padding: 20px;
+}

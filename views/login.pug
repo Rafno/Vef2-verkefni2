@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  if data.err
+    ul
+      for e in data.err
+        li = e
+  form(method = 'post' action='/login')
+    div(class="rowHandler")
+      div(class="row")
+        label(for='username') username
+        input(type='text', name = 'username')
+      div(class="row")
+        label(for='password') password
+        input(type='password', name = 'password')
+    div(class="Bottom")
+      input(type="submit" value="senda")
+      a(href = '/') Tilbaka
